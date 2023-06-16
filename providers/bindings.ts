@@ -1,11 +1,9 @@
 const bindings = [
-
   {
-    name: 'Adonis/Core/AchievementRepository',
-    modelPath:
-      'App/Core/Achievement/Infrastructure/Mongoose/Models/Achievement',
+    name: 'Adonis/Core/ClientRepository',
+    modelPath: 'App/Core/Clients/Infrastructure/Mongoose/Model/Client',
     repositoryPath:
-      'App/Core/Achievement/Infrastructure/Mongoose/Repositories/AchievementRepository'
+      'App/Core/Clients/Infrastructure/Mongoose/Repositories/ClientRepository'
   }
 ]
 

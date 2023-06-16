@@ -1,1 +1,2 @@
-export * from './Collections.enum'
+
+export * from "./Collections.enum"

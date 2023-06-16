@@ -1,8 +1,0 @@
-export enum TypesOfStatesEnum {
-  DRAFT = 'DRAFT',
-  PLANNED = 'PLANNED',
-  TO_COMPLETE = 'TO_COMPLETE',
-  DONE = 'DONE',
-  FINISHED = 'FINISHED',
-  DELETED = 'DELETED'
-}
