@@ -1,9 +1,11 @@
 import { BaseCommand } from '@adonisjs/core/build/standalone'
 import ClientRepository from 'App/Core/Clients/Infrastructure/Mongoose/Repositories'
-import listClients from "../dataClients.json"
+import listClients from '../dataClients.json'
+import AchievementRepository from 'App/Core/Achievement/Infrastructure/Mongoose/Repositories'
+
 //aqui vamos a importar listado de clientes (se va a llamar listClients)
 
-const Cliente = require("../model/cliente");
+//const Cliente = require('../model/cliente')
 export default class DeleteClient extends BaseCommand {
   /**
    * Command name is used to run the command
@@ -29,12 +31,12 @@ export default class DeleteClient extends BaseCommand {
     stayAlive: false
   }
 
-private processingProgressBar(index:number, limit:number):number{
-  if(index<limit){
-    index++
+  private processingProgressBar(index: number, limit: number): number {
+    if (index < limit) {
+      index++
+    }
+    return index
   }
-  return index
-}
 
   public async run() {
     this.logger.success('Started delete Client')
@@ -49,15 +51,15 @@ private processingProgressBar(index:number, limit:number):number{
   }
 
   private async execute(): Promise<void> {
-   let i:number=0
-    for (let item of listClients){
-      const findClient=await Cliente.findById(
-        item.idClient
-      )
-      if(findClient){
+    let i: number = 0
+    for (let item of listClients) {
+      const findClient = await ClientRepository.findOne({
+        _id: item.idClient
+      })
+      if (findClient) {
         console.log(findClient)
-      }else console.log("no hay cliente")
-    i=this.processingProgressBar(i,listClients.length)
+      } else console.log('no hay cliente')
+      i = this.processingProgressBar(i, listClients.length)
     }
   }
 }

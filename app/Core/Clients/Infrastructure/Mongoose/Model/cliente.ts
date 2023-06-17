@@ -1,5 +1,6 @@
-import {model} from "mongoose"
-import {ClientsDocument} from "../Interface"
-import {clienteSchema} from "../Schema/cliente"
+//import { model } from 'mongoose'
+import { model } from '@ioc:Mongoose'
+import { ClientDocument } from '../Interfaces'
+import { ClienteSchema } from '../Schema/Cliente'
 
-export default model<ClientsDocument>('Client',clienteSchema)
+export default model<ClientDocument>('Client', ClienteSchema)

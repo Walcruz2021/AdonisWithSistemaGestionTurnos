@@ -1,6 +1,6 @@
-import Client from "../Clients/Infrastructure/Mongoose/Model/cliente"
-export * from "./enums"
+import Client from '../Clients/Infrastructure/Mongoose/Model/Cliente'
+export * from './enums'
 
-export const Collection={
-    clients:Client
+export const Collection = {
+  clients: Client
 }

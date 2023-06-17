@@ -1,6 +1,6 @@
-import { Schema } from "mongoose"
+import { Schema } from 'mongoose'
 
-export const clienteSchema:Schema = new Schema({
+export const ClienteSchema: Schema = new Schema({
   name: { type: String, require: true },
   // nameDog:{type:String,require:true},
   phone: { type: Number, require: true },
@@ -8,11 +8,12 @@ export const clienteSchema:Schema = new Schema({
   notesCli: { type: String, require: true },
   turnos: [{ type: Schema.Types.ObjectId, ref: 'Turno' }],
   pedidos: [{ type: Schema.Types.ObjectId, ref: 'Venta' }],
-  perros: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Perro',
-    nameDog: String
-  }],
-  status:{type:Boolean,default:true}
+  perros: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Perro',
+      nameDog: String
+    }
+  ],
+  status: { type: Boolean, default: true }
 })
-
