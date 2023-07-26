@@ -1,10 +1,10 @@
-import { Document } from 'mongoose'
-
+//import { Document } from 'mongoose'
+import { Document } from '@ioc:Mongoose'
 export interface Turnos {}
 export interface Pedidos {}
 export interface Perros {}
 
-export interface Clients {
+export interface Client {
   turnos: Turnos[]
   pedidos: Pedidos[]
   perros: Perros[]
@@ -15,7 +15,8 @@ export interface Clients {
   status: boolean
 }
 
-export type ClientsDocument=Clients & Document
+export type ClientDocument=Client & Document
+//export type ClientsDocument=Clients & Document
 
 //Esta interfaz define la estructura de los documentos de cliente en la base de datos.
 //El objetivo de export type ClientsDocument = Clients & Document es crear un nuevo tipo llamado ClientsDocument 

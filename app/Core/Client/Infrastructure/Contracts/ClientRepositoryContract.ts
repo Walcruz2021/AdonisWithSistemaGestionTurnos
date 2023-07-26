@@ -1,6 +1,6 @@
-export default interface ClientsRepositoryContracts{
-findOne<T>(query:T):Promise<any>
+export default interface ClientRepositoryContract{
 findAll<T>(query:T, populate:T):Promise<any[]>
+findOne<T>(query:T):Promise<any>
 count<T>(query:T):Promise<number>
 updateMany<T>(query:T,querySet:T):Promise<any>
 findOneAndUpdate<T>(query:T,querySet:T):Promise<any>

@@ -1,5 +1,5 @@
-import ClientsRepositoryContract from "./ClientsRepositoryContract"
-export {ClientsRepositoryContract}
+import ClientRepositoryContract from "./ClientRepositoryContract"
+export {ClientRepositoryContract}
 
 
 //En la primera línea, se importa la interfaz ClientsRepositoryContract desde el archivo 

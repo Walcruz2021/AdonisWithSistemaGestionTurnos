@@ -1,10 +1,10 @@
-import { ClientsDocument } from '../Interface'
-import { ClientsRepositoryContract } from '../../Contracts'
+import { ClientRepositoryContract } from '../../Contracts'
+import { ClientDocument } from '../Interfaces'
 
-export default class ClientRepository implements ClientsRepositoryContract {
+export default class ClientRepository implements ClientRepositoryContract {
   constructor(private clientModel) {}
 
-  public async findOne<Object>(query: Object): Promise<ClientsDocument> {
+  public async findOne<Object>(query: Object): Promise<ClientDocument> {
     return this.clientModel.find(query)
   }
 
@@ -13,7 +13,7 @@ export default class ClientRepository implements ClientsRepositoryContract {
     //se buscarán todos los documentos de clientes en la base de datos.
     query: any={},
     populate: any=[]
-  ): Promise<ClientsDocument[]> {
+  ): Promise<ClientDocument[]> {
     return this.clientModel.find(query).populate(populate)
   }
 
@@ -24,14 +24,14 @@ export default class ClientRepository implements ClientsRepositoryContract {
   public async updateMany<Object>(
     query: Object,
     querySet: Object
-  ): Promise<ClientsDocument> {
+  ): Promise<ClientDocument> {
     return this.clientModel.find(query, querySet)
   }
 
   public async findOneAndUpdate<Object>(
     query: Object,
     querySet: Object
-  ): Promise<ClientsDocument> {
+  ): Promise<ClientDocument> {
     return this.clientModel.find(query, querySet)
   }
 }

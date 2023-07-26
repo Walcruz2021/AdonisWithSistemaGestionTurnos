@@ -1,9 +1,8 @@
 import { BaseCommand } from '@adonisjs/core/build/standalone'
-import ClientRepository from 'App/Core/Clients/Infrastructure/Mongoose/Repositories'
-import listClients from "../dataClients.json"
+import ClientRepository from 'App/Core/Client/Infrastructure/Mongoose/Repositories'
+import listClients from "../../dataClients.json"
 //aqui vamos a importar listado de clientes (se va a llamar listClients)
 
-const Cliente = require("../model/cliente");
 export default class DeleteClient extends BaseCommand {
   /**
    * Command name is used to run the command
@@ -50,9 +49,12 @@ private processingProgressBar(index:number, limit:number):number{
 
   private async execute(): Promise<void> {
    let i:number=0
-    for (let item of listClients){
-      const findClient=await Cliente.findById(
-        item.idClient
+    
+   for (let item of listClients){
+      console.log(item.idClient)
+      const findClient=await ClientRepository.findOne({
+        _id:item.idClient
+      }
       )
       if(findClient){
         console.log(findClient)

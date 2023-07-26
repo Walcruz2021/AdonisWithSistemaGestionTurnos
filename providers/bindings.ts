@@ -1,9 +1,9 @@
 const bindings = [
   {
     name: 'Adonis/Core/ClientRepository',
-    modelPath: 'App/Core/Clients/Infrastructure/Mongoose/Model/Client',
+    modelPath: 'App/Core/Client/Infrastructure/Mongoose/Model/Client',
     repositoryPath:
-      'App/Core/Clients/Infrastructure/Mongoose/Repositories/ClientRepository'
+      'App/Core/Client/Infrastructure/Mongoose/Repositories/ClientRepository'
   }
 ]
 

@@ -1,10 +1,9 @@
-import type { ApplicationContract } from '@ioc:Adonis/Core/Application'
-import { DATABASE_URL } from '../app/utils'
 import Env from '@ioc:Adonis/Core/Env'
+import type { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import { Mongoose } from 'mongoose'
+import { DATABASE_URL } from '../app/utils'
 
 export default class AppProvider {
-  
   constructor(protected app: ApplicationContract) {}
 
   public register() {
@@ -20,16 +19,8 @@ export default class AppProvider {
       keepAlive: true
     })
 
-    mongoose.connection.on('connected', () => {
-      console.log('Connected to MongoDB')
-    })
-  
-    mongoose.connection.on('error', (error) => {
-      console.error('MongoDB connection error:', error)
-    })
-
-    
     this.app.container.singleton('Mongoose', () => mongoose)
+
   }
 
   public async boot() {

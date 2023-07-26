@@ -1,5 +1,5 @@
-import ClientRep from "./ClientRepository";
-import Client from "../Model/cliente"
+import Client from "App/Core/Client/Infrastructure/Mongoose/Model/Client"
+import ClientRep from "App/Core/Client/Infrastructure/Mongoose/Repositories/ClientRepository";
 
 const ClientRepository=new ClientRep(Client)
 export default ClientRepository

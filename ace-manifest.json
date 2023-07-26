@@ -5,7 +5,7 @@
         "loadApp": true,
         "stayAlive": false
       },
-      "commandPath": "./commands/DeleteClient",
+      "commandPath": "./commands/Client/DeleteClient",
       "commandName": "delete:client",
       "description": "This command delete client",
       "args": [],

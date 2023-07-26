@@ -1,6 +1,13 @@
-import { Schema } from "mongoose"
+import { Schema } from '@ioc:Mongoose'
 
-export const clienteSchema:Schema = new Schema({
+//export const clienteSchema:Schema = new Schema({
+
+export const ClientSchema:Schema = new Schema({
+  _id: { type: Schema.Types.ObjectId, required: false },
+  envImpactIndex: {
+    type: Schema.Types.ObjectId,
+    ref: 'EnvImpactIndex'
+  },
   name: { type: String, require: true },
   // nameDog:{type:String,require:true},
   phone: { type: Number, require: true },
