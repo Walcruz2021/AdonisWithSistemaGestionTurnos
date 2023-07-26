@@ -15,11 +15,12 @@ export const ClientSchema:Schema = new Schema({
   notesCli: { type: String, require: true },
   turnos: [{ type: Schema.Types.ObjectId, ref: 'Turno' }],
   pedidos: [{ type: Schema.Types.ObjectId, ref: 'Venta' }],
-  perros: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Perro',
-    nameDog: String
-  }],
-  status:{type:Boolean,default:true}
+  perros: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Perro',
+      nameDog: String
+    }
+  ],
+  status: { type: Boolean, default: true }
 })
-

@@ -9,7 +9,7 @@ export default class ClientRepository implements ClientRepositoryContract {
   }
 
   public async findAll(
-    //Si no se proporciona ningún valor para query, se utiliza un objeto vacío como consulta, lo que significa que 
+    //Si no se proporciona ningún valor para query, se utiliza un objeto vacío como consulta, lo que significa que
     //se buscarán todos los documentos de clientes en la base de datos.
     query: any={},
     populate: any=[]
