@@ -1,9 +1,9 @@
 <div style="text-align: center">
-    <h1>PELUQUERIA CANINA Command </h1>
+    <h1>Sistema de Gestion de Turnos PY</h1>
 </div>
 
 <p>
-  This is the repo of main UCROP.IT command , this are build with <a href="https://adonisjs.com/">AdonisJS</a> Framework.
+  This is the repo of main SISTEMA DE GESTION DE TURNOS PY command , this are build with <a href="https://adonisjs.com/">AdonisJS</a> Framework.
 </p>
 
 ## Versions
